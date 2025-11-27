@@ -1,0 +1,30 @@
+# Lista inicial
+mi_lista = []
+
+while True:
+    print("\nMenú:")
+    print("1. Agregar un elemento a la lista")
+    print("2. Eliminar un elemento de la lista")
+    print("3. Salir")
+
+    opcion = input("Elija una opción: ")
+
+    if opcion == "1":
+        elemento = input("Ingrese el elemento a agregar: ")
+        mi_lista.append(elemento)
+        print("Lista actual:", mi_lista)
+
+    elif opcion == "2":
+        elemento = input("Ingrese el elemento a eliminar: ")
+        if elemento in mi_lista:
+            mi_lista.remove(elemento)
+            print("Elemento eliminado. Lista actual:", mi_lista)
+        else:
+            print("El elemento no está en la lista.")
+
+    elif opcion == "3":
+        print("Saliendo del programa…")
+        break  # termina el while
+
+    else:
+        print("Opción inválida, intente de nuevo.")
